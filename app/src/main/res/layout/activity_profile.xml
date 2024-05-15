@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/showUsernameProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:focusable="false"
+        android:text="Username" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Email"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/showEmailProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:focusable="false"
+        android:text="user@example.com" />
+
+    <Button
+        android:id="@+id/buttonEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showEmailProfile"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/primary"
+        android:text="Edit Profile" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeActivity">
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Welcome, User!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray" />
+
+    <Button
+        android:id="@+id/buttonViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/buttonLogout"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:text="Profile"
+        android:backgroundTint="@color/blue" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="49dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/ic_logout"
+        android:contentDescription="Logout"
+        android:backgroundTint="@color/gray"
+        android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewWelcome"
+        android:padding="16dp" />
+
+</RelativeLayout>
