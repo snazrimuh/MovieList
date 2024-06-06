@@ -1,4 +1,4 @@
-package com.simple.movielist.ui
+package com.simple.movielist.ui.activity.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,10 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.simple.movielist.data.ApiClient
-import com.simple.movielist.data.DataStoreManager
-import com.simple.movielist.data.MovieResponse
+import com.simple.data.local.DataStoreManager
 import com.simple.movielist.R
+import com.simple.movielist.ui.activity.profile.ProfileActivity
+import com.simple.movielist.ui.activity.login.LoginActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -58,10 +58,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun fetchMovies() {
-        val call = ApiClient.apiService.getPopularMovies("3eafb1d6a440475fa82592a3ddb64769")
+        val call = com.simple.data.api.ApiClient.apiService.getPopularMovies("3eafb1d6a440475fa82592a3ddb64769")
 
-        call.enqueue(object : Callback<MovieResponse> {
-            override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
+        call.enqueue(object : Callback<com.simple.data.model.MovieResponse> {
+            override fun onResponse(call: Call<com.simple.data.model.MovieResponse>, response: Response<com.simple.data.model.MovieResponse>) {
                 if (response.isSuccessful) {
                     val movies = response.body()?.results
                     if (movies != null) {
@@ -71,7 +71,7 @@ class HomeActivity : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
+            override fun onFailure(call: Call<com.simple.data.model.MovieResponse>, t: Throwable) {
                 Toast.makeText(this@HomeActivity, "Failed to load movies", Toast.LENGTH_SHORT).show()
             }
         })

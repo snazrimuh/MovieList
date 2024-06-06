@@ -14,6 +14,9 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        renderscriptTargetApi = 21
+        renderscriptSupportModeEnabled = true
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -41,6 +44,7 @@ android {
 
 dependencies {
 
+    implementation(project(":data"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -59,4 +63,24 @@ dependencies {
 
     implementation("androidx.datastore:datastore-preferences:1.1.1")
     implementation ("com.squareup.picasso:picasso:2.8")
+
+    debugImplementation("com.github.chuckerteam.chucker:library:4.0.0")
+    releaseImplementation("com.github.chuckerteam.chucker:library-no-op:4.0.0")
+
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
+
+    implementation(platform("io.insert-koin:koin-bom:3.5.6"))
+    implementation("io.insert-koin:koin-android")
+    implementation("io.insert-koin:koin-core")
+
+    implementation("io.github.afreakyelf:Pdf-Viewer:2.1.1")
+
+    implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-smoothstreaming:2.19.1")
+
+    implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+
 }

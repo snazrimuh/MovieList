@@ -1,4 +1,4 @@
-package com.simple.movielist.data
+package com.simple.data.model
 
 data class Movie(
     val title: String,

@@ -1,4 +1,4 @@
-package com.simple.movielist.data
+package com.simple.movielist.ui.activity.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

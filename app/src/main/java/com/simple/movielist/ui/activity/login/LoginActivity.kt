@@ -1,4 +1,4 @@
-package com.simple.movielist.ui
+package com.simple.movielist.ui.activity.login
 
 import android.Manifest
 import android.content.Intent
@@ -12,19 +12,20 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
-import com.simple.movielist.data.DataStoreManager
+import com.simple.data.local.DataStoreManager
 import com.simple.movielist.R
+import com.simple.movielist.ui.activity.home.HomeActivity
+import com.simple.movielist.ui.activity.register.RegisterActivity
 import kotlinx.coroutines.flow.first
+import org.koin.android.ext.android.inject
 
 class LoginActivity : AppCompatActivity() {
-    private lateinit var dataStoreManager: DataStoreManager
+    private val dataStoreManager: DataStoreManager by inject()
     private val LOCATION_PERMISSION_REQUEST_CODE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
-        dataStoreManager = DataStoreManager(this)
 
         val isLoggedInFlow = dataStoreManager.isLoggedIn
         lifecycleScope.launchWhenStarted {
