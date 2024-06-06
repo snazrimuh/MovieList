@@ -1,2 +1,2 @@
-# MovieList
- Movie List App using themoviedb API, Challenge 5 Synrgy Academy
+# MovieList App 
+ Movie List App using themoviedb API with Kotlin Android Studio
