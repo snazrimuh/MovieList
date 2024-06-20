@@ -18,7 +18,7 @@ import org.koin.android.ext.android.inject
 
 class RegisterActivity : AppCompatActivity() {
     private val dataStoreManager: DataStoreManager by inject()
-    private var profilePictureUri: Uri? = null
+    var profilePictureUri: Uri? = null
     private lateinit var imageViewProfilePicture: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {

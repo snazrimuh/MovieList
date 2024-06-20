@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <!-- Menonaktifkan aturan tertentu -->
+    <issue id="IconDensities">
+        <ignore path="res/" />
+    </issue>
+
+    <!-- Mengubah tingkat keparahan -->
+    <issue id="UnusedResources" severity="warning" />
+
+    <!-- Mengabaikan file atau direktori tertentu -->
+    <issue id="MissingTranslation">
+        <ignore path="res/values/" />
+    </issue>
+</lint>

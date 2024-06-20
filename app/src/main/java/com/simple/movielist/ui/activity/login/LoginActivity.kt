@@ -20,7 +20,7 @@ import kotlinx.coroutines.flow.first
 import org.koin.android.ext.android.inject
 
 class LoginActivity : AppCompatActivity() {
-    private val dataStoreManager: DataStoreManager by inject()
+    val dataStoreManager: DataStoreManager by inject()
     private val LOCATION_PERMISSION_REQUEST_CODE = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
