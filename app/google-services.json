@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380889858948",
+    "project_id": "movielist-f4ced",
+    "storage_bucket": "movielist-f4ced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380889858948:android:14e61bb22413f53f98d3d1",
+        "android_client_info": {
+          "package_name": "com.simple.movielist.free"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGlXPhrcPCAkwYo_Db8fAiT2NuECdWTCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

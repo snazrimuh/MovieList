@@ -1,6 +1,7 @@
 package com.simple.movielist
 
 import android.app.Application
+import com.google.firebase.FirebaseApp
 import com.simple.data.api.ApiClient
 import com.simple.movielist.di.appModule
 import org.koin.android.ext.koin.androidContext
@@ -16,5 +17,6 @@ class MyApplication : Application() {
             androidContext(this@MyApplication)
             modules(appModule)
         }
+        FirebaseApp.initializeApp(this)
     }
 }
